@@ -74,9 +74,22 @@ Rebuilt the styling to create a dark, SaaS-like dashboard:
 
 ---
 
+## 🎁 Bonus Section Features (Implemented)
+
+1. **Accessibility (A11y) Support:**
+   - **Keyboard Drawer Control:** Handled pressing the `Escape` key to close the sliding list sidebar (`ListSidebar.tsx`) automatically when it is open.
+   - **ARIA Attributes:** Configured the dropdown list select trigger in `AddToListDropdown.tsx` to include `aria-haspopup`, `aria-expanded`, and `aria-label` attributes for screen readers.
+2. **Git Commit History:**
+   - Initialized Git tracking locally in the workspace.
+   - Structured and split the modifications into **6 sequential, semantic commits** (`feat:` and `fix:`) that document the incremental progress of layouts, stores, bug fixes, detail fallbacks, avatar overlays, and stacking corrections.
+3. **Dynamic Social Avatars:**
+   - Patched broken YouTube 404 avatars using a dynamic social avatar fallback resolver (`unavatar.io`). It looks up the live channel branding dynamically using handles, keeping original data intact elsewhere.
+
+---
+
 ## 🧠 Assumptions & Trade-offs
 - **Backend Persistence**: Assumed that the scope of this frontend task did not require a backend API. Substituted a REST backend by binding Zustand state with local storage persistence.
-- **Audience Metrics**: Standardized undefined metrics as `"N/A"` grids to prevent layout shifts or breaking undefined values.
+- **Audience Metrics & Missing Keys**: Handled missing `username` properties in YouTube records by dynamically falling back to the `handle` field, resolving search input crashes and preventing `@undefined` labels.
 - **Cleanups**: Removed the unused dependency `react-beautiful-dnd` from typescript checks where necessary to maintain React 19 compatibility.
 
 ---
