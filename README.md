@@ -5,6 +5,7 @@ A premium, production-ready Influencer Discovery & Campaign Management applicati
 ---
 
 ## 🚀 Live Demo & Build Verification
+- **Live URL**: [https://vibe-coder-assignment.vercel.app](https://vibe-coder-assignment.vercel.app)
 - **Vite Build**: Compiles successfully with zero TypeScript, bundler, or linting errors.
 - **Lint Check**: Passes ESLint checks with zero warnings or issues.
 
